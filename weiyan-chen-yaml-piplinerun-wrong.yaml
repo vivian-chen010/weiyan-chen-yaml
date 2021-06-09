@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: weiyan-chen-linter-pipeline-run1
+spec:
+pipelineRef:
+    name: weiyan-chen-linter-pipeline
+  workspaces:
+    - name: shared-workspace
+      persistentvolumeclaim:
+        claimName: weiyan-chen
